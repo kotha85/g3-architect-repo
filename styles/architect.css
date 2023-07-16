@@ -6,6 +6,9 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
+.text-light-gray{
+    color: #727272;
+}
 .btn-primary{
     border-radius: 8px;
     background-color: #FF900E;
@@ -53,36 +56,15 @@ nav li a{
     font-weight: 700;
     color: #131313;
 }
-.banner-des{
-    color: #727272;
-}
+
 .banner img{
     margin-top: 50px;
     width: 100%;
 }
-/* responsive media queries */
-/* mobile devices */
-@media screen and (max-width:576px) {
-    .header{
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-}
-/* tablet or medium devices */
-@media screen and (min-width:576px) and (max-width:960px) {
-    .header{
-        padding: 50px;
-    }
-    
-    nav{
-        flex-direction: column;
-    }
-}
+
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 .team-container{
     display: flex;
@@ -107,4 +89,79 @@ main{
 .teams-title .text-features{
     color: #FF900E;
     font-weight: 700;
+}
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.facts-card-container .card{
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+..sponsors-img-container img{
+    width: 165px;
+}
+
+/* responsive media queries */
+/* mobile devices */
+@media screen and (max-width:576px) {
+    .header{
+        padding: 20px;
+    }
+    nav,
+    .team-container,
+    .facts-card-container,
+    .sponsors-img-container
+    {
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: 1fr;
+    }
+     .teams-content,
+     .facts-card-container
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    } 
+    .facts-card-container{
+        gap: 20px;
+    }
+    
+}
+/* tablet or medium devices */
+@media screen and (min-width:576px) and (max-width:960px) {
+    .header{
+        padding: 50px;
+    }
+    
+    nav,.team-container,
+    .sponsors-img-container
+    {
+        flex-direction: column;
+    }
 }
